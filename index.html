@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<meta charset="UTF-8">
+	<title>Spring</title>
+</head>
+<body>
+	<div class="wrep">
+		<div id="ex2bNameTag">
+			<template id="ex2bNameTagTemplate">
+				<style>
+					.outer {
+						border: 2px solid black;
+						border-radius: 1em;
+						background: red;
+						font-size: 20pt;
+						width: 12em;
+						height: 7em;
+						text-align: center;
+					}
+					.boilerplate {
+						color: white;
+						font-family: sans-serif;
+						padding: 0.5em;
+					}
+					.name {
+						color: black;
+						background: white;
+						font-family: "Marker Felt", cursive;
+						font-size: 45pt;
+						padding-top: 0.2em;
+					}
+				</style>
+				<div class="outer">
+					<div class="boilerplate">
+    					Hi! My name is
+  					</div>
+					<div class="name">
+						<content></content>
+					</div>
+				</div>
+			</template>
+			Bob
+		</div>
+		<p>
+			<label for="ex2NewName">new</label>
+			<input name= "ex2bNewName" value="new">
+			<input name= "ex2bNewBack" value= "red">
+			<button onclick="updateClicked('#ex2bNameTag','input[name=ex2bNewName]');">update</button>
+		</p>
+		<script>
+		function updateClicked(nameTagSelector, textBoxSelector){
+			var text = document.querySelector(textBoxSelector);
+			document.querySelector(nameTagSelector).textContent = text.value;
+			text.value = '';
+			text.fucus();
+		}
+		</script>
+		<script>
+			(function(){
+				if(!window.HTMLTemplateElement || !HTMLElement.prototype.createShadowRoot){
+					remave('#ex2b');
+					return;
+				}
+
+				var shadow = document.querySelector('#ex2bNameTag').createShadowRoot();
+				var template = document.querySelector('#ex2bNameTagTemplate');
+				shadow.appendChild(template.content);
+				template.remove;
+			})();
+		</script>
+	</div>
+</body>
+</html>
