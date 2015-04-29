@@ -49,8 +49,8 @@
 		</p>
 		<p>
 			<label for="wx2bNewBack">form</label>
-			<input name= "ex2bNewBack" value= "red">
-			<button onclick="updateBack('#ex2bNameTagTemplate', 'input[name=ex2bNewBack]')">update</button>
+			<input name= "ex2bNewBack" value= "blue">
+			<button onclick="updateBack('div', 'input[name=ex2bNewBack]')">update</button>
 		</p>
 		<script>
 		function updateClicked(nameTagSelector, textBoxSelector){
@@ -61,8 +61,7 @@
 		}
 		function updateBack(nameTagSelector,textBoxSelector){
 			var back = document.querySelector(textBoxSelector);
-			//document.querySelector(nameTagSelector).style.background = back.value;
-			template.innerHTML = '<style>'+':host { background:'+ back +';}' + '</style>'
+			document.querySelector(nameTagSelector).style.backgroundColor= back.value;
 			back.value = '';
 			back.fucus(); 
 		}
@@ -77,7 +76,6 @@
 				var shadow = document.querySelector('#ex2bNameTag').createShadowRoot();
 				var template = document.querySelector('#ex2bNameTagTemplate');
 				shadow.appendChild(template.content);
-				shadow.appendChild(template.background)
 				template.remove;
 			})();
 		</script>
