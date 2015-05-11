@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>電子計算機研究会</title>
+
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<header>
+		<img src="" alt="電子計算機研究会">
+	</header>
+	<section>
+		<div id="content">
+			<nav>
+				<a href="">
+					<li></li>
+				</a>
+				<a href="">
+					<li></li>
+				</a>
+				<a href="">
+					<li></li>
+				</a>
+				<a href="">
+					<li></li>
+				</a>
+			</nav>
+			<div id="article">
+				<h2>プログラム班</h2>
+				<article>
+						
+				</article>
+			</div>
+		</div>
+	</section>
+	<footer>
+		copyright &copy; 2011-2015 KIT-IC.
+	</footer>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="s/jquery.pjax.js"></script>
+	<script>
+		$(funcion(){
+			$.pjax({
+				area:'#content',
+				link:'a:not([target])'
+			});
+		});
+	</script>
+</body>
+</html>
