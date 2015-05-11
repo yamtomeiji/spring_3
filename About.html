@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>電子計算機研究会</title>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section>
+		<div id="content">
+			<nav>
+				<a href="">
+					<li>A</li>
+				</a>
+				<a href="">
+					<li>W</li>
+				</a>
+				<a href="">
+					<li>G</li>
+				</a>
+				<a href="">
+					<li>L</li>
+				</a>
+			</nav>
+			<div id="text">
+				<h2>電子計算機研究会とは？</h2>
+				<article>
+					　電子計算機研究会とは、パソコンを使って<span class="red">制作活動</span>をする部活です。制作活動といっても色々ありますが、主に<span class="red">PROGRAMMING(プログラミング)<br>CG(コンピュータグラフィック)<br>DTM(デスクトップミュージック)<br>NETWORK(ネットワーク)<br></span>の制作活動をしています。<br>
+				</article>
+			</div>
+		</div>
+	</section>
+	<footer>
+		copyright &copy; 2011-2015 KIT-IC.
+	</footer>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/jquery.pjax.js"></script>
+	<script>
+		var targetTop = $elTarget.offset().top;
+
+		$(window).on('scroll', function(event){
+			var scrollTop = elScrollable.scrollTop;
+
+			if (scrollTop >= elScrollable.scrollTop) {
+				$.pjax({
+					area:'text';
+				});
+			}
+		});
+	</script>
+</body>
+</html>
