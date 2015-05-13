@@ -10,37 +10,31 @@
 
 <body>
 	<section>
-		<div>
-			<img src="images/" alt="電子計算機研究会">
+		<div id="logo">
+			<img src="images/logo.png" alt="">
+			<h1>電子計算機研究会</h1>
 		</div>
 		<nav>
-			<a href="about.html#content">
+			<a href="about.html">
 				<li>About</li>
 			</a>
-			<a href="">
+			<a href="works.html">
 				<li>Works</li>
 			</a>
-			<a href="">
+			<a href="group.html">
 				<li>Group</li>
 			</a>
-			<a href="">
+			<a href="link.html">
 				<li>Link</li>
 			</a>
 		</nav>
 	</section>
 	<footer>
-		copyright &copy; 2011-2015 KIT-IC.
+		<p class="right">copyright &copy; 2011-2015 KIT-IC.</p>
 	</footer>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="s/jquery.pjax.js"></script>
-	<script>
-		$(funcion(){
-			$.pjax({
-				area:'#content',
-				link:'a:not([target])'
-			});
-		});
-	</script>
+	<script src="js/jquery.pjax.js"></script>
+	<script src="js/pjax.js"></script>
 </body>
 </html>

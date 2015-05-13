@@ -7,53 +7,37 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<style>
-	body {
-		background: blue;
-	}
-	</style>
 	<section>
 		<div id="content">
 			<nav>
-				<a href="#content">
-					<li>A</li>
-				</a>
-				<a href="">
-					<li>W</li>
-				</a>
-				<a href="group.html#content">
-					<li>G</li>
-				</a>
-				<a href="">
-					<li>L</li>
-				</a>
+				<li>
+					<a href="#content">A</a>
+				</li>
+				<li>
+					<a href="works.html">W</a>
+				</li>
+				<li>
+					<a href="group.html">G</a>
+				</li>
+				<li>
+					<a href="link.html">L</a>
+				</li>
 			</nav>
-			<div id="text">
+			<div class="clear"></div>
+			<div id="article">
 				<h2>電子計算機研究会とは？</h2>
 				<article>
-					　電子計算機研究会とは、パソコンを使って<span class="red">制作活動</span>をする部活です。制作活動といっても色々ありますが、主に<span class="red">PROGRAMMING(プログラミング)<br>CG(コンピュータグラフィック)<br>DTM(デスクトップミュージック)<br>NETWORK(ネットワーク)<br></span>の制作活動をしています。<br>
+					　電子計算機研究会とは、パソコンを使って<span class="red">制作活動</span>をする部活です。
 				</article>
 			</div>
 		</div>
 	</section>
 	<footer>
-		copyright &copy; 2011-2015 KIT-IC.
+		<p class="right">copyright &copy; 2011-2015 KIT-IC.</p>
 	</footer>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/jquery.pjax.js"></script>
-	<script>
-		var targetTop = $elTarget.offset().top;
-
-		$(window).on('scroll', function(event){
-			var scrollTop = elScrollable.scrollTop;
-
-			if (scrollTop >= elScrollable.scrollTop) {
-				$.pjax({
-					area:'text';
-				});
-			}
-		});
-	</script>
+	<script src="js/pjax.js"></script>
 </body>
 </html>
